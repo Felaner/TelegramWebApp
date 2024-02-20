@@ -29,3 +29,11 @@ export default {
     
 }
 </script>
+
+<style lang="sass">
+
+body
+  background: var(--tg-theme-bg-color)
+  color: var(--tg-theme-text-color)
+
+</style>

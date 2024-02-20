@@ -8,8 +8,6 @@ import { loadFonts } from './plugins/webfontloader'
 
 loadFonts()
 
-import '@/assets/styles/style.sass'
-
 const app = createApp(App)
   .use(router)
   .use(store)
