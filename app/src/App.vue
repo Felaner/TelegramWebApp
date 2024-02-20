@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="app">
     <AppHeader/>
     
     <v-main>
@@ -32,7 +32,7 @@ export default {
 
 <style lang="sass">
 
-body
+.app
   background: var(--tg-theme-bg-color)
   color: var(--tg-theme-text-color)
 
