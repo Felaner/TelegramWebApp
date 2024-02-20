@@ -1,5 +1,7 @@
 <template>
   <v-app>
+    <AppHeader/>
+    
     <v-main>
       <router-view/>
     </v-main>
@@ -8,8 +10,11 @@
 
 <script>
 
+import AppHeader from "@/components/AppHeader.vue";
+
 export default {
     name: 'App',
+    components: {AppHeader},
 
     data: () => ({
         //
@@ -17,6 +22,10 @@ export default {
 
     mounted() {
         this.$store.dispatch('telegram/initTelegramWebApp', window.Telegram.WebApp)
-    }
+        
+        window.Telegram.initDa
+    },
+    
+    
 }
 </script>
