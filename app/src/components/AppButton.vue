@@ -23,12 +23,12 @@ export default {
 
 .button
   &--text
-    color: var(--tg-theme-link-color)
+    color: var(--tg-theme-link-color, $tg-link-color)
     
     background: none
   
   &--flat
-    background-color: var(--tg-theme-button-color)
+    background-color: var(--tg-theme-button-color, $tg-button-color)
   
 
 </style>

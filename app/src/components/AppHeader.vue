@@ -9,7 +9,7 @@
       </div>
 
       <button class="app__bar__button__menu">
-        <v-img :src="require('@/assets/icons/elipsis_circle_outline.svg')" height="20px" width="20px"></v-img>
+        <IconEllipsisCircleOutline h="20px" w="20px"></IconEllipsisCircleOutline>
       </button>
     </div>
   </v-app-bar>
@@ -19,10 +19,11 @@
 
 import AppButton from "@/components/AppButton.vue"
 import {mapState} from "vuex";
+import IconEllipsisCircleOutline from "@/components/icons/IconEllipsisCircleOutline.vue";
 
 export default {
     name: 'AppHeader',
-    components: {AppButton},
+    components: {IconEllipsisCircleOutline, AppButton},
 
     data: () => ({
     
@@ -84,7 +85,6 @@ export default {
   
   &__button
     &__menu
-    
   &__title
     position: absolute
     left: 50%
@@ -104,9 +104,11 @@ export default {
       
       text-align: center
 
-      color: rgba(120, 120, 120, 1)
+      color: var(--tg-theme-hint-color, $tg-hint-color)
       
       font-size: 13px
       line-height: 100%
 
 </style>
+<script setup>
+</script>
