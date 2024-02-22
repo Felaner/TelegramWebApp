@@ -22,10 +22,8 @@ export default {
 <style lang="sass">
 
 .button
-  color: var(--tg-theme-button-text-color)
-  
   &--text
-    color: var(--tg-theme-button-text-color)
+    color: var(--tg-theme-text-color)
     
     background: none
   
