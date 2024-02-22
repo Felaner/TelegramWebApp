@@ -31,8 +31,7 @@ export default {
 <style lang="sass">
 
 .app
-  color: var(--tg-theme-text-color, $tg-text-color)
-  
   background: var(--tg-theme-secondary-bg-color, $tg-secondary-bg-color)
+  color: var(--tg-theme-text-color, $tg-text-color)
 
 </style>

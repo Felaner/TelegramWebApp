@@ -1,9 +1,18 @@
 <template>
-  <v-container>
+  <v-container class="mt-10">
     <v-row>
       <v-col>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eius fuga in ipsa iusto laborum obcaecati quasi reiciendis sit suscipit tempora tempore, veniam voluptatum! Animi distinctio illum libero quidem suscipit.</p>
-        <h2>Ваш telegram: {{ user?.username }}</h2>
+        <v-tabs
+          v-model="tab"
+          class="auction__tabs"
+          selected-class="auction__tabs__tab--active"
+          align-tabs="start"
+          height="40px"
+        >
+          <v-tab class="auction__tabs__tab" :ripple="false" :value="1">Usernames</v-tab>
+          <v-tab class="auction__tabs__tab" :ripple="false" :value="2">Numbers</v-tab>
+          <v-tab class="auction__tabs__tab" :ripple="false" :value="3">Premium</v-tab>
+        </v-tabs>
       </v-col>
     </v-row>
   </v-container>
@@ -16,6 +25,10 @@ import {mapState} from "vuex";
 export default defineComponent({
 
     name: 'AuctionView',
+    
+    data: () => ({
+        tab: null
+    }),
 
     computed: {
         ...mapState({
@@ -29,3 +42,35 @@ export default defineComponent({
     }
 })
 </script>
+
+<style lang="sass">
+
+.auction
+  &__tabs
+    &__tab
+      align-items: start
+      
+      min-height: auto !important
+      height: 24px !important
+      min-width: auto !important
+      width: auto !important
+      margin-right: 22px
+      padding: 0
+      
+      font-size: 13px
+      font-weight: normal
+      letter-spacing: normal
+      text-transform: unset
+
+      color: var(--tg-theme-hint-color, $tg-hint-color) !important
+
+      .v-btn__overlay, .v-btn__underlay
+        display: none
+      
+      &--active
+        color: var(--tg-theme-link-color, $tg-link-color) !important
+        
+    .v-tab__slider
+      height: 4px
+      border-radius: 6.67px 6.67px 0 0
+</style>

@@ -83,6 +83,7 @@ export default {
   
   &__button
     &__menu
+    
   &__title
     position: absolute
     left: 50%
