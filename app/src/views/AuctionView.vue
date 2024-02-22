@@ -15,7 +15,7 @@ import {mapState} from "vuex";
 
 export default defineComponent({
 
-    name: 'HomeView',
+    name: 'AuctionView',
 
     computed: {
         ...mapState({

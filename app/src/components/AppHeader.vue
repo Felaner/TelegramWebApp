@@ -1,7 +1,7 @@
 <template>
   <v-app-bar class="app__bar" density="compact" :elevation="0">
     <div class="app__bar__wrapper">
-      <AppButton class-name="text" text="Cancel"/>
+      <AppButton @click="isAuctionPage ? closeApp() : toBackPage()" class-name="text" text="Cancel"/>
 
       <div class="app__bar__title">
         <h1 class="app__bar__title__text">App</h1>
@@ -18,17 +18,35 @@
 <script>
 
 import AppButton from "@/components/AppButton.vue"
+import {mapState} from "vuex";
 
 export default {
     name: 'AppHeader',
     components: {AppButton},
 
     data: () => ({
-
+    
     }),
 
     computed: {
-
+        ...mapState({
+            twa: state => state.telegram.WebApp
+        }),
+        activeLink() {
+            return this.$route.name
+        },
+        isAuctionPage() {
+            return this.activeLink === 'auction'
+        }
+    },
+    
+    methods: {
+        closeApp() {
+            this.twa.close()
+        },
+        toBackPage() {
+            console.log(this.activeLink)
+        }
     }
 }
 </script>

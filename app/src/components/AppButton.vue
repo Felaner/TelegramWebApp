@@ -23,7 +23,7 @@ export default {
 
 .button
   &--text
-    color: var(--tg-theme-text-color)
+    color: var(--tg-theme-link-color)
     
     background: none
   
