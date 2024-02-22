@@ -9,9 +9,9 @@
           align-tabs="start"
           height="40px"
         >
-          <v-tab class="auction__tabs__tab" :ripple="false" :value="1">Usernames</v-tab>
-          <v-tab class="auction__tabs__tab" :ripple="false" :value="2">Numbers</v-tab>
-          <v-tab class="auction__tabs__tab" :ripple="false" :value="3">Premium</v-tab>
+          <v-tab class="auction__tabs__tab" :ripple="false" value="Usernames">Usernames</v-tab>
+          <v-tab class="auction__tabs__tab" :ripple="false" value="Numbers">Numbers</v-tab>
+          <v-tab class="auction__tabs__tab" :ripple="false" value="Premium">Premium</v-tab>
         </v-tabs>
       </v-col>
     </v-row>

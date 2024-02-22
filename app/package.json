@@ -11,9 +11,9 @@
     "@mdi/font": "5.9.55",
     "node-sass": "^9.0.0",
     "roboto-fontface": "*",
-    "vue": "^3.2.13",
+    "vue": "^3.4.19",
     "vue-router": "^4.0.3",
-    "vuetify": "^3.5.4",
+    "vuetify": "^3.5.5",
     "vuex": "^4.0.0",
     "webfontloader": "^1.6.28"
   },
