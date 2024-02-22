@@ -71,9 +71,7 @@ export default {
   justify-content: space-around
   margin-top: 15px
   
-  color: var(--tg-theme-text-color) !important
-  
-  background: var(--tg-theme-bg-color) !important
+  background: var(--tg-theme-secondary-bg-color, $tg-secondary-bg-color) !important
   
   &__wrapper
     position: relative
@@ -93,6 +91,9 @@ export default {
     display: flex
     flex-direction: column
     align-self: center
+
+
+    color: var(--tg-theme-text-color, $tg-text-color)
       
     &__text
       font-size: 17px
