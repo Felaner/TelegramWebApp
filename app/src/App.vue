@@ -22,8 +22,6 @@ export default {
 
     mounted() {
         this.$store.dispatch('telegram/initTelegramWebApp', window.Telegram.WebApp)
-        
-        window.Telegram.initDa
     },
     
     

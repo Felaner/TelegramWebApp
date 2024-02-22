@@ -1,5 +1,5 @@
 <template>
-  <v-btn class="button" :class="'button--' + className">{{ text }}</v-btn>
+  <button class="button" :class="'button--' + className">{{ text }}</button>
 </template>
 
 <script>
@@ -24,5 +24,11 @@ export default {
 .button
   background-color: var(--tg-theme-button-color)
   color: var(--tg-theme-button-text-color)
+  
+  &--text
+    color: var(--tg-theme-button-text-color)
+  
+  &--flat
+  
 
 </style>
